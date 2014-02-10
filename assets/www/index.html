@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Authentification</title>
+<link rel="stylesheet" href="css/style.default.css" type="text/css" />
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+<link rel="stylesheet" href="css/animate.delay.css" type="text/css" />
+<link rel="stylesheet" href="css/animate.min.css" type="text/css" />
+
+<script type="text/javascript" src="js/cordova.js"></script>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/webintent.js"></script>
+<script>
+document.addEventListener("deviceready", onDeviceReady, false);
+
+function onDeviceReady() {
+checkConnection();
+}
+function checkConnection() {
+    var networkState = navigator.network.connection.type;
+
+    var states = {};
+    states[Connection.NONE]     = 'No network connection';
+    navigator.notification.beep(1);
+    if(networkState==Connection.NONE)
+    alert( states[networkState]);
+}
+
+$(document).ready(function() {
+$('#send').on('click',function(){
+var form=$("#form"),
+	data={},
+	verification=1;
+
+		form.find('[name]').each(function(index,value){
+		var input=$(this),
+		name=input.attr('name'),
+		value=input.val();
+		if (value==""){
+			$("#response").html(" <div class=\"alert alert-error\">"+input.attr('placeholder').toLowerCase()+" is empty !</div>");
+			verification=0;
+			return false;
+		}
+		
+		});
+
+	if (verification == 1) {
+	
+	window.plugins.webintent.startActivity({
+   action: 'WebIntent.ACTION_VIEW',
+   login:$('#username').val(),
+   password:$('#password').val()
+  }, function () { }
+  , function () { $("#response").html(" <div class=\"alert alert-error\">Login Error !!! </div>");	});
+}
+	
+							
+});
+
+});
+</script>
+</head>
+
+<body class="loginpage">
+
+<div class="loginpanel">
+    <div class="loginpanelinner">
+        <div class="logo animate0 bounceIn"><img src="logo.png"  style="width: 150px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; margin-top: -30px;" alt="" ></img></div>
+         
+        <div id="form">
+           
+            <div class="inputwrapper animate1 bounceIn">
+                <input type="text" name="username" id="username" placeholder="Username" />
+            </div>
+            <div class="inputwrapper animate2 bounceIn">
+                <input type="password" name="password" id="password" placeholder="Password" />
+            </div>
+            <div id="response"></div>
+            <div class="inputwrapper animate3 bounceIn">
+                <button id="send">Sign In</button>
+            </div>
+            <div class="inputwrapper animate4 bounceIn">
+                <label><a href="./home/index.html">What is SBox ? </a> </label>
+            </div>
+		</div>
+    </div><!--loginpanelinner-->
+</div><!--loginpanel-->
+
+<div class="loginfooter">
+    <p>&copy; 2014 SBox. All Rights Reserved.</p>
+</div>
+
+</body>
+</html>

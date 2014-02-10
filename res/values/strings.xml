@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SBox</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_section0">Home Automation</string>
+    <string name="title_section1">Building Automation System</string>
+    <string name="title_section2">PC Monitoring</string>
+    <string name="title_section3">Car and Family Locator</string>
+    <string name="action_search">Search</string>
+    <string name="action_support">Feedback</string>
+    <string name="action_menu">Menu</string>
+    <string name="lay">Layout</string>
+    <string name="house_room_list">Room List</string>
+    <string name="room_equipement_list">Equipement List</string>
+    <string name="header">Header</string>
+
+</resources>

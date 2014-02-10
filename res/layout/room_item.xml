@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="110.0dip"
+    android:background="@drawable/list_selector" >
+
+    <TextView
+        android:id="@+id/header_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:paddingLeft="10.0dip"
+        android:text="Header"
+        android:textColor="#ffffffff" />
+
+    <RelativeLayout
+        android:id="@+id/galleryEntry"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/header_text"
+        android:padding="5.0dip" >
+
+        <ImageView
+            android:id="@+id/images"
+            android:layout_width="100.0dip"
+            android:layout_height="80.0dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:minHeight="80.0dip"
+            android:minWidth="100.0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/livingroom" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="80.0dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/images"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_above="@+id/txtNbrDevice"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dip"
+                android:layout_toLeftOf="@id/marker"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:singleLine="false"
+                android:text="aa"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="#ff000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtNbrDevice"
+                android:layout_width="70.0dip"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="5.0dip"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="By: someone"
+                android:textColor="#ff000000"
+                android:textSize="9.0dip" />
+
+            <TextView
+                android:id="@+id/notifications_id"
+                android:layout_width="50.0dip"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toLeftOf="@id/marker"
+                android:layout_toRightOf="@id/txtNbrDevice"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="0 photos"
+                android:textColor="#ff000000"
+                android:textSize="9.0dip" />
+
+            <ImageView
+                android:id="@id/marker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="3.0dip"
+                android:src="@drawable/arrow_large" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!-- <include -->
+    <!-- android:id="@id/topicEntry" -->
+    <!-- android:layout_alignParentLeft="true" -->
+    <!-- android:layout_below="@id/header_text1" -->
+    <!-- layout="@layout/entry_text" /> -->
+
+</RelativeLayout>

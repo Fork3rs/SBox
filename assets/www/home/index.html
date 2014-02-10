@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SmartBox - MVP Page</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="../css/colorbox.css" type="text/css" />
+
+
+<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery-migrate-1.1.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui-1.9.2.min.js"></script>
+<script type="text/javascript" src="../js/modernizr.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/jquery.colorbox-min.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function(){
+        
+        jQuery('#screenshots a').colorbox();
+        
+        jQuery('.head-menu a').bind('click',function(event){
+            var anchor = jQuery(this);
+     
+            jQuery('html, body').stop().animate({
+                scrollTop: jQuery(anchor.attr('href')).offset().top - 75
+            }, 1500,'easeInOutExpo');
+            event.preventDefault();
+        });
+    });
+</script>
+</head>
+
+<body>
+
+<div class="header">
+    <div class="header-inner">
+        <div class="logo">
+           <img alt="" src="../logo.png" style="height: 67px; width: 67px;">
+        </div>
+        
+        <ul class="head-menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#screenshots">Screenshots</a></li>
+        </ul>
+    </div><!--header-inner-->
+</div><!--header-->
+
+<div id="about" class="banner">
+    <div class="banner-inner">
+        <div class="about">
+            <h1>Inroducing <span>SmartBox</span> !</h1><h1>Building Management Revolution ! </h1>
+            <p>SmartBox is a revolutionary building controlling application which allow you to monitor your house or your company anytime anywhere !     SmartBox let you monitor your surveillance camera, intrusion detection system, fire alarm, heating system, and much much more !</p>
+            <p class="btns">
+                <small>This is the MVP page of the Tunisian 7th Team.</small>
+            </p>
+        </div>
+		
+		<div class="mini"><img alt="" src="images/f1.jpg" style="width: 400px;"></div>
+		
+    </div><!--banner-inner-->
+</div><!--banner-->
+
+
+<div id="features" class="features">
+    <div class="features-inner">
+        <h2 class="title">SmartBox Features</h2>
+        
+       
+        
+        <div class="row-fluid">
+            <div class="span4">
+                <h4><span class="iconfa-camera"></span> Surveillance Camera Monitoring</h4>
+                <p>Parent's favorite security feature is of course provided by SBOX. With one touch you can see your house surrounding in real-time any place any time !</p>
+            </div>
+            <div class="span4">
+                <h4><span class="iconfa-bell"></span>Intrusion Detection System</h4>
+                <p>With SBOX notification system you are vigilant 24/24, 7/7, and able to detect any intrusion into your house and immediately take appropriate actions.   </p>
+                
+            </div>
+            <div class="span4">
+                <h4><span class="iconfa-tint"></span>Heating/Cooling Control</h4>
+                <p>Luxury is not that far ! with SBOX you can prepare your bath while you're driving home back from a tiring workday. You can also control heat level and the air-conditioner.</p>
+            </div>
+        </div><!--row-fluid-->
+        
+        
+        
+        <div class="row-fluid">
+            <div class="span4">
+                <h4><span class="iconfa-key"></span> Doors Locking</h4>
+                <p>Always wondering if you have firmly closed the door after it's too late ? No more worries ! With a click of a button you can open or close any door you want, or even check it's status and if anybody has opened it without letting you know.</p>
+            </div>
+            <div class="span4">
+                <h4><span class="iconfa-fire"></span> Fire Alarm</h4>
+                <p>We can't talk about safety if we don't consider fire detection. SBOX is able to detect fire or gas leak and alert you and even call fire-fighters</p>
+            </div>
+            <div class="span4">
+                <h4><span class="iconfa-ok"></span> Easy To Use</h4>
+                <p>All of these awesome features come to you in a simple mobile application, very handy and user-friendly !</p>
+                
+            </div>
+        </div><!--row-fluid-->
+        
+       
+        
+        <div class="row-fluid">
+            <div class="span4">
+                <h4><span class="iconfa-globe"></span> Everywhere Anywhere !</h4>
+                <p>All you need is internet access and POF ! There you go controlling everything from any place any time you want without any limitations.</p>
+            </div>
+            <div class="span4">
+                <h4><span class="iconfa-star"></span> Adapted to your need</h4>
+                <p>Within 24 hour, a trained team will be there and design specially for you an application that suits all of your needs.</p>
+            </div>
+            <div class="span4">
+                <h4><span class="iconfa-heart"></span> Beautiful Design</h4>
+                <p>A beautiful multi-platform user interfaces developed by our best designers just for you.</p>
+                
+            </div>
+        </div><!--row-fluid-->
+        
+        
+    </div><!--features-inner-->
+</div><!--features-->
+
+<div id="screenshots" class="screenshots">
+    <div class="screen-inner">
+        <h2 class="title">Screenshots</h2>
+        <br />
+        
+        <br />
+        <div class="row-fluid">
+            <div class="span4">
+                <a href="images/1.png" rel="colorbox"><img src="images/1.png" alt="" /></a>
+            </div>
+            <div class="span4">
+                <a href="images/2.png" rel="colorbox"><img src="images/2.png" alt="" /></a>
+            </div>
+            <div class="span4">
+                <a href="images/3.png" rel="colorbox"><img src="images/3.png" alt="" /></a>
+            </div>
+        </div>
+        
+        <br />
+       
+        <br />
+        <div class="row-fluid">
+            <div class="span4">
+                <a href="images/4.png" rel="colorbox"><img src="images/4.png" alt="" /></a>
+            </div>
+            <div class="span4">
+                <a href="images/5.png" rel="colorbox"><img src="images/5.png" alt="" /></a>
+            </div>
+            <div class="span4">
+                <a href="images/6.png" rel="colorbox"><img src="images/6.png" alt="" /></a>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span4">
+                <a href="images/7.png" rel="colorbox"><img src="images/7.png" alt="" /></a>
+            </div>
+            <div class="span4">
+                <a href="images/8.png" rel="colorbox"><img src="images/8.png" alt="" /></a>
+            </div>
+            <div class="span4">
+                <a href="images/9.png" rel="colorbox"><img src="images/9.png" alt="" /></a>
+            </div>
+        </div>
+        <div class="row-fluid">
+           
+            <div class="span4">
+                <a href="images/10.png" rel="colorbox"><img src="images/10.png" alt="" /></a>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<div class="footer">
+    &copy; SBox AMAC 2014 .
+</div>
+
+</body>
+</html>

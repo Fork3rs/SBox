@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_light_modal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:alpha="100"
+    android:background="@drawable/bathroom"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center|center_vertical"
+    android:layout_gravity="center"
+    android:orientation="vertical" >
+
+<com.touchmenotapps.widget.radialmenu.progress.widget.RadialProgressWidget
+    android:id="@+id/temperature_modal"
+    android:layout_width="wrap_content"
+    android:layout_height="0dp"
+    android:padding="5dp"
+    android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/modal_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name" />
+
+    <ImageView
+        android:id="@+id/modal_img_remote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name" />
+
+       <SeekBar
+           android:id="@+id/seekBar1"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:minHeight="40dp"
+           android:progress="30" />
+
+</LinearLayout>
+ 
+
+</LinearLayout>
